@@ -14,19 +14,13 @@ class Chef {
 }
 
 checkForFood(foodItem) {
-
-// console.log(foodItem)
-// console.log(this.restaurant.menus.breakfast)
   for (var i = 0; i < this.restaurant.menus.breakfast.length;i++) {
   if (this.restaurant.menus.breakfast[i, i].name || this.restaurant.menus.breakfast[0, 1].name === foodItem.name) {
     return `Yes, we're serving ${foodItem.name} today!`
-  } 
-      
+  }    
 }
-
-
-return `Sorry, we aren't serving ${foodItem.name} today.`
-}
+    return `Sorry, we aren't serving ${foodItem.name} today.`
+  }
 }
 
 
