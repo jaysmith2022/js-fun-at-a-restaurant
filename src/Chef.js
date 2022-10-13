@@ -16,7 +16,7 @@ class Chef {
 checkForFood(foodItem) {
 
 var menuItems = [];
-var newFood = "";
+
   for (var i = 0; i < this.restaurant.menus.breakfast.length;i++) {
   menuItems.push(this.restaurant.menus.breakfast[i].name)
 }
