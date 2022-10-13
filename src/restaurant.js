@@ -3,11 +3,11 @@ function createRestaurant(name) {
     breakfast: [],
     lunch: [],
     dinner: [],
-}
+    }
   var restName = {
     name: name,
     menus: menus,
-}
+  }
   return restName
 }
 
@@ -17,22 +17,15 @@ if (order.type === `lunch` && !menu.menus.lunch.includes(order)) {
 } else {
   if (order.type === `breakfast` && !menu.menus.breakfast.includes(order)) {
     menu.menus.breakfast.push(order)
-  } else {
+} else {
     if (order.type === `dinner` && !menu.menus.dinner.includes(order)) {
     menu.menus.dinner.push(order)
+      }
+    }
   }
-}
-}
 }
 
 function removeMenuItem(menu, order, time) {
-  // console.log(menu.menus)
-  // console.log(order)
-  // console.log(time)
-  // if (!menu.menus.breakfast.includes(order)) {
-  //   return `Sorry, we don't sell ${order}, try adding a new recipe!`
-  // }
-  // for (var i = 0; i < menu.menus.length;i++) {
   if (menu.menus[time] !== `undefined`) {
     for (var i = 0; i < menu.menus[time].length;i++) {
   if (menu.menus.breakfast[0].name === order) {
