@@ -14,12 +14,18 @@ class Chef {
 }
 
 checkForFood(foodItem) {
+
+var menuItems = [];
+var newFood = "";
   for (var i = 0; i < this.restaurant.menus.breakfast.length;i++) {
-  if (this.restaurant.menus.breakfast[i, i].name || this.restaurant.menus.breakfast[0, 1].name === foodItem.name) {
-    return `Yes, we're serving ${foodItem.name} today!`
-  }    
+  menuItems.push(this.restaurant.menus.breakfast[i].name)
 }
-    return `Sorry, we aren't serving ${foodItem.name} today.`
+  menuItems = menuItems.join(`, `)
+if (menuItems.includes(foodItem.name)) {
+  return `Yes, we're serving ${foodItem.name} today!`
+} else {
+  return `Sorry, we aren't serving ${foodItem.name} today.`
+    }
   }
 }
 
