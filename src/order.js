@@ -5,14 +5,14 @@ function takeOrder(orders, deliveryOrders) {
 }
 
 function refundOrder(orderNum, deliveryOrder) {
- if (orderNum === 1657) {
-  deliveryOrder.shift(orderNum)
- } else {
-  if (orderNum === 2893) {
-    deliveryOrder.splice(1,1)
+  for (var i = 0; i < deliveryOrder.length;i++) {
+    if (deliveryOrder[i].orderNumber === orderNum) {
+      deliveryOrder.splice(i,1)
+    }
   }
- }
+
 }
+
 
  function listItems(deliveryOrder) {
 var sandwichType = []
