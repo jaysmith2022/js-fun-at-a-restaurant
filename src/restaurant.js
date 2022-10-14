@@ -28,14 +28,9 @@ if (order.type === `lunch` && !menu.menus.lunch.includes(order)) {
 function removeMenuItem(menu, order, time) {
   if (menu.menus[time] !== `undefined`) {
     for (var i = 0; i < menu.menus[time].length;i++) {
-  if (menu.menus.breakfast[0].name === order) {
-      menu.menus.breakfast.splice(order)
-    return `No one is eating our ${order} - it has been removed from the ${time} menu!`
-  } else {
-  if (menu.menus.dinner[0].name === order) {
-      menu.menus.dinner.splice(order)
-    return `No one is eating our ${order} - it has been removed from the ${time} menu!`
-    }
+  if (menu.menus[time][i].name === order) {
+      menu.menus[time].splice(i, 1)
+    return `No one is eating our ${order} - it has been removed from the ${time} menu!`  
   }
 }
 return `Sorry, we don't sell ${order}, try adding a new recipe!`
